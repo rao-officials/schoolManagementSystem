@@ -1,0 +1,11 @@
+.teachersTable tbody td {
+vertical-align: middle !important;
+}
+
+.teachersCover {
+    background-image:url('/assets/Teachers2.jpg');
+    background-size: cover;
+    padding: 50px;
+   
+}
+

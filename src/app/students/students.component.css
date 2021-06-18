@@ -1,0 +1,26 @@
+/* .list ul li img {
+    width: 200px;
+    float: left;
+}
+
+.list ul li {
+    background-color: #d3d3d30d;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px;
+}
+
+.list ul li p{
+    float: right;
+    margin-top:90px; 
+}
+ */
+
+
+ .studentsCover {
+    background-image:url('/assets/class-room.jpg');
+    background-size: cover;
+    padding: 50px;
+   
+}

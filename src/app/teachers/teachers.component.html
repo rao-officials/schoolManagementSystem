@@ -1,0 +1,39 @@
+<div class="teachersCover">
+    <div class="container-fluid">
+
+        <table class="table table-bordered tableList">
+            <thead>
+                <tr>
+
+                    <th scope="col">Teachers</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Qualification</th>
+                    <th scope="col">Experience</th>
+                    <th scope="col">Specialization</th>
+                    <th scope="col">Gender</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tcher of teachers">
+                    <td>
+                        <img [src]="tcher.img" style="width: 50px;border-radius:50px">
+                    </td>
+                    <td>{{tcher.name}}</td>
+                    <td>{{tcher.age}}</td>
+                    <td>{{tcher.edu}}</td>
+                    <td>{{tcher.exp}}</td>
+                    <td>{{tcher.special}}</td>
+                    <td>{{tcher.gender}}</td>
+                </tr>
+
+
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>

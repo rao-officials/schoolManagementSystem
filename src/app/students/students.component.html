@@ -1,0 +1,53 @@
+<div class="studentsCover">
+    <div class="container-fluid">
+
+        <table class="table table-bordered tableList">
+            <thead>
+                <tr>
+
+                    <th scope="col">Students</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Roll No</th>
+                    <th scope="col">Class</th>
+                    <th scope="col">Gender</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let std of Students">
+                    <td>
+                        <img [src]="std.img" style="width: 50px;border-radius:50px">
+                    </td>
+                    <td>{{std.name}}</td>
+                    <td>{{std.rollno}}</td>
+                    <td>{{std.class}}</td>
+                    <td>{{std.gender}}</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+
+
+        <div class="logics-area">
+            <div class="temp">
+                <h5>Two way data binding Example</h5>
+                <input type="text" [(ngModel)]="name">
+                <p>{{name}}</p>
+            </div>
+
+            <div class="interpolation-examples">
+                <h5>String Interpolation Examples</h5>
+                <p>This student is: {{studentStatus}}</p>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>

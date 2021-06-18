@@ -1,0 +1,1 @@
+alert('Hello, custom js');

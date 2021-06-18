@@ -1,0 +1,14 @@
+.active {
+    background-color: #DD0330;
+}
+
+.navbar {
+    background-color: #C30E2E !important;
+}
+
+ul.navbar-nav li a {
+    color: #fff !important;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: monospace;
+}
