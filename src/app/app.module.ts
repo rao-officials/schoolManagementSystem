@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import{RegistrationModule} from "./registration/registration.module";
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserModule,
     AppRoutingModule,
     RegistrationModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
