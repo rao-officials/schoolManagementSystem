@@ -3,9 +3,6 @@ import { NgModule } from '@angular/core';
 import{RegistrationModule} from "./registration/registration.module";
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
@@ -27,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
     RegistrationModule,
     FormsModule,
     HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

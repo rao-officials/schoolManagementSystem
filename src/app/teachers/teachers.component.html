@@ -5,27 +5,28 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Teachers</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Qualification</th>
-                    <th scope="col">Experience</th>
-                    <th scope="col">Specialization</th>
-                    <th scope="col">Gender</th>
+                    <th scope="col">Teacher ID</th>
+                    <th scope="col">Avatar</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Email</th>
+
 
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let tcher of teachers">
+                <tr *ngFor="let teacherdata of teachersData">
+                   
+                    <td>{{teacherdata.id}}</td>
                     <td>
-                        <img [src]="tcher.img" style="width: 50px;border-radius:50px">
+                        <img [src]="teacherdata.avatar" style="width: 50px;border-radius:50px">
                     </td>
-                    <td>{{tcher.name}}</td>
-                    <td>{{tcher.age}}</td>
-                    <td>{{tcher.edu}}</td>
-                    <td>{{tcher.exp}}</td>
-                    <td>{{tcher.special}}</td>
-                    <td>{{tcher.gender}}</td>
+                    
+                    <td>{{teacherdata.first_name}}</td>
+                    <td>{{teacherdata.last_name}}</td>
+                    <td>{{teacherdata.email}}</td>
+                    
+
                 </tr>
 
 

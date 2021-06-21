@@ -1,8 +1,14 @@
 <div class="loginCover">
     <div class="login-block">
         <h1>Login</h1>
-        <input type="text" placeholder="Username" id="username" />
-        <input type="password" value="" placeholder="Password" id="password" />
-        <button>Submit</button>
+        <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+            <input type="text" placeholder="Username" formControlName="email" id="username"/>
+            <input type="password" value="" formControlName="pass" placeholder="Password" id="password" />
+            <button>Submit</button>
+            <button class="mt-2" type="button" (click)="autoFillData()">Auto Fill</button>
+            
+           
+        </form>
+        
     </div>
 </div>

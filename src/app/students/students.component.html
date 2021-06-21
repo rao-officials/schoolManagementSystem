@@ -5,24 +5,27 @@
             <thead>
                 <tr>
 
-                    <th scope="col">Students</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Roll No</th>
-                    <th scope="col">Class</th>
-                    <th scope="col">Gender</th>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last NAme</th>
+                    <th scope="col">Email</th>
+
 
                 </tr>
             </thead>
 
             <tbody>
-                <tr *ngFor="let std of Students">
+
+                <tr *ngFor="let data of receivedData">
+                 
+                    <td>{{data.id}}</td>
                     <td>
-                        <img [src]="std.img" style="width: 50px;border-radius:50px">
+                        <img [src]="data.avatar" style="width: 50px;border-radius:50px">
                     </td>
-                    <td>{{std.name}}</td>
-                    <td>{{std.rollno}}</td>
-                    <td>{{std.class}}</td>
-                    <td>{{std.gender}}</td>
+                    <td>{{data.first_name}}</td>
+                    <td>{{data.last_name}}</td>
+                    <td>{{data.email}}</td>
                 </tr>
             </tbody>
 

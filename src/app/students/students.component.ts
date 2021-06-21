@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-
+import { ApiDataService } from '../api-data.service';
 
 @Component({
   selector: 'app-students',
@@ -12,6 +12,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class StudentsComponent implements OnInit {
 
   name = "max";
+  receivedData;
 
 
    Students: any =
@@ -38,13 +39,17 @@ export class StudentsComponent implements OnInit {
   }
 
 
-  constructor() {
+  constructor(private mydata : ApiDataService) {
 
     // console.log(this.pop(Students));
   }
 
   ngOnInit() {
-    
+    this.mydata.getApiData().subscribe({
+      next:data => this.receivedData = data.data
+    })
+
+
   }
   
 
