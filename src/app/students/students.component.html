@@ -5,11 +5,13 @@
             <thead>
                 <tr>
 
+                    <th scope="col">Index</th>
                     <th scope="col">ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last NAme</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Action</th>
 
 
                 </tr>
@@ -17,8 +19,9 @@
 
             <tbody>
 
-                <tr *ngFor="let data of receivedData">
+                <tr *ngFor="let data of receivedData; let i=index">
                  
+                    <td>{{i}}</td>
                     <td>{{data.id}}</td>
                     <td>
                         <img [src]="data.avatar" style="width: 50px;border-radius:50px">
@@ -26,6 +29,10 @@
                     <td>{{data.first_name}}</td>
                     <td>{{data.last_name}}</td>
                     <td>{{data.email}}</td>
+                    <td>
+                        <button class="btn btn-primary btn-xs mr-2">Edit</button>
+                        <button class="btn btn-danger btn-xs" (click)="delete(i)" >Delete</button>
+                    </td>
                 </tr>
             </tbody>
 
@@ -34,21 +41,6 @@
 
 
 
-
-        <div class="logics-area">
-            <div class="temp">
-                <h5>Two way data binding Example</h5>
-                <input type="text" [(ngModel)]="name">
-                <p>{{name}}</p>
-            </div>
-
-            <div class="interpolation-examples">
-                <h5>String Interpolation Examples</h5>
-                <p>This student is: {{studentStatus}}</p>
-
-            </div>
-
-        </div>
 
 
 

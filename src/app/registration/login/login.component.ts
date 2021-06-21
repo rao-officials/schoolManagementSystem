@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   autoFillData(){
     
-    alert('');
+    alert('Auto populated data successfully');
     this.signInForm.controls['email'].setValue('Haseeb');  
     this.signInForm.controls['pass'].setValue('123456');
   }

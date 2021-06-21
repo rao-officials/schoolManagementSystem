@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // import { FormsModule } from '@angular/forms';
 
@@ -11,27 +11,25 @@ import { Component, OnInit} from '@angular/core';
 })
 export class SignUpComponent implements OnInit {
 
- 
-
-  
-  studentName:string;
-   studentrollNo:any;
-   studentClass:string;
-   studentGender:string;
 
 
 
-addstudent(){
+  studentName: string;
+  studentrollNo: any;
+  studentClass: string;
+  studentGender: string;
 
 
 
-// this.Students.push(this.studentName,this.studentrollNo,this.studentClass,this.studentGender );
-console.log(this.studentName+' '+this.studentrollNo+' '+this.studentClass+' '+this.studentGender)
+  addstudent() {
 
 
-}
+    console.log(this.studentName + ' ' + this.studentrollNo + ' ' + this.studentClass + ' ' + this.studentGender)
 
-constructor() { }
+
+  }
+
+  constructor() { }
 
   ngOnInit() {
   }

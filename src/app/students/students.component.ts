@@ -15,7 +15,7 @@ export class StudentsComponent implements OnInit {
   receivedData;
 
 
-   Students: any =
+  Students: any =
     [
       { id: 1, name: 'Haseeb', rollno: 'MCE-F-018', class: 'MCS', gender: 'Male', img: 'assets/images/students/Haseeb.png' },
       { id: 2, name: 'Adnan Javid', rollno: 'GC-s14-29', class: 'BSCS', gender: 'Male', img: 'assets/images/students/adnan.jpg' },
@@ -24,11 +24,11 @@ export class StudentsComponent implements OnInit {
       { id: 5, name: 'Talha Bukhari', rollno: 'GC-F11-121', class: 'BS', gender: 'Male', img: 'assets/images/students/talha.png' },
       { id: 6, name: 'Ameer', rollno: 'MC-F19-11', class: 'Matric', gender: 'Male', img: 'assets/images/students/ameer.jpg' },
     ];
-    
 
 
-   
-   
+
+
+
 
 
 
@@ -39,19 +39,30 @@ export class StudentsComponent implements OnInit {
   }
 
 
-  constructor(private mydata : ApiDataService) {
+  constructor(private mydata: ApiDataService) {
 
     // console.log(this.pop(Students));
   }
 
   ngOnInit() {
     this.mydata.getApiData().subscribe({
-      next:data => this.receivedData = data.data
+      next: data => {
+        this.receivedData = data.data
+        console.log(this.receivedData);
+      }
+
     })
 
 
+
+
+
   }
-  
+  delete(i) {
+    console.log(i)
+   
+      this.receivedData.splice(i, 1);
+  }
 
 }
 
